@@ -15,5 +15,5 @@ MonoBehaviour:
   name: UI
   clips:
   - name: On Click
-    clip: {fileID: 8300000, guid: 4fb135d3c45ee7343ba34122f8adc35f, type: 3}
+    clip: {fileID: 8300000, guid: 9df4c2e414fd7d847978300d2a2b0213, type: 3}
     volume: 1
