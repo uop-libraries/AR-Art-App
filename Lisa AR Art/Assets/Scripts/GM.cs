@@ -9,6 +9,7 @@ public class GM : MonoBehaviour
     float tempCountDownValue;
     public AudioClip detectedSound;
     private AudioSource source;
+     
 
     // Start is called before the first frame update
     private void Awake()
@@ -20,6 +21,7 @@ public class GM : MonoBehaviour
     void Start()
     {
         //ARImages.SetActive(false);
+        this.GetComponent<TextReader>().readTextFile();
     }
 
     // Update is called once per frame
@@ -39,6 +41,7 @@ public class GM : MonoBehaviour
             source.PlayOneShot(detectedSound, 1.0f);
             StartCoroutine(StartCountdown(3));
         }
+
     }
 
     /**
