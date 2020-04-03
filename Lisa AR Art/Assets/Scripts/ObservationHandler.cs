@@ -26,32 +26,47 @@ public class ObservationHandler : MonoBehaviour
         return listOfObservations;
     }
 
+    /**
+     * called once in the startup of observations
+     */
+    public void startObservations()
+    {
+        listOfObservations[currentPlayingObservation].GetComponent<Observation>().playObservation();
+    }
     public void playNextObservation()
     {
         Debug.Log("playNextObservation");
-        if (currentPlayingObservation < listOfObservations.Count)
+        Debug.Log("currentPlayingObservation " + currentPlayingObservation);
+        listOfObservations[currentPlayingObservation].GetComponent<Observation>().pauseObservation();
+        currentPlayingObservation++;
+        if (currentPlayingObservation < listOfObservations.Count && currentPlayingObservation >= 0)
         {
             listOfObservations[currentPlayingObservation].GetComponent<Observation>().playObservation();
         }
-        else
+        else if(currentPlayingObservation >= 0)
         {
             currentPlayingObservation = 0;
-            playNextObservation(); //start from the top
+            listOfObservations[currentPlayingObservation].GetComponent<Observation>().playObservation();
         }
     }
 
     public void playPrevObservation()
     {
         Debug.Log("playPrevObservation");
-        if (currentPlayingObservation-1 > 0 && currentPlayingObservation < listOfObservations.Count)
+        listOfObservations[currentPlayingObservation].GetComponent<Observation>().pauseObservation();
+        currentPlayingObservation--;
+        Debug.Log("currentPlayingObservation " + currentPlayingObservation);
+        if (currentPlayingObservation >= 0 && currentPlayingObservation < listOfObservations.Count)
         {
-            listOfObservations[currentPlayingObservation-1].GetComponent<Observation>().playObservation();
+            listOfObservations[currentPlayingObservation].GetComponent<Observation>().playObservation();
         }
-        else
+        else 
         {
             currentPlayingObservation = listOfObservations.Count - 1;
-            playPrevObservation(); //start from end
+            listOfObservations[currentPlayingObservation].GetComponent<Observation>().playObservation();
         }
+        Debug.Log("currentPlayingObservation after" + currentPlayingObservation);
+
     }
 
     public void printAllObservations()

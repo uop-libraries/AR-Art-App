@@ -41,6 +41,7 @@ public class Observation : MonoBehaviour
 
     public void pauseObservation()
     {
+        this.gameObject.SetActive(false);
 
     }
 

@@ -65,5 +65,6 @@ public class GM : MonoBehaviour
         }
         detectedImage.SetActive(false);
         arrows.SetActive(true);
+        this.GetComponent<ObservationHandler>().startObservations();
     }
 }
