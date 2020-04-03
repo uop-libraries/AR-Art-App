@@ -10,18 +10,19 @@ using System.IO;
  */
 public class TextReader : MonoBehaviour
 {
-    private IDictionary<int, string> dict;
+    private List<GameObject> listOfObservations;
+
 
     void Awake()
     {
-        dict = new Dictionary<int, string>();
     }
-    public void readTextFile()
+    public void readTextFile(List<GameObject> observations)
     {
         string filePath = "Assets/TextFile/test.txt";
         StreamReader reader = new StreamReader(filePath);
         string text = reader.ReadToEnd();
         reader.Close(); //close the reader
+        listOfObservations = observations;
         this.addStringToDictionary(text);
 
     }
@@ -37,20 +38,33 @@ public class TextReader : MonoBehaviour
      */
     void addStringToDictionary(string text)
     {
+        int observationNum = 0; //used to keep track of observation
+        int numberOfObservations = listOfObservations.Count;
+        int i = 0;
         var lines = text.Split("\n"[0]);
-        for(int i = 0; i < lines.Length; i++)
+        while(i < lines.Length -1)
         {
-            if (!string.IsNullOrWhiteSpace(lines[i]))
+            if (string.IsNullOrWhiteSpace(lines[i])) //next observation data
             {
-                Debug.Log(lines[i]);
-                dict.Add(i, lines[i]);
+                observationNum++;
             }
-        }
-        
+            {
+                if (observationNum <= numberOfObservations)
+                {
+                    Debug.Log(lines.Length);
+                    Debug.Log("i" + i);
+                    listOfObservations[observationNum].GetComponent<Observation>().setObservationID(lines[i]);
+                    i++;
+                    listOfObservations[observationNum].GetComponent<Observation>().setObservationYear(lines[i]);
+                    i++;
+                    listOfObservations[observationNum].GetComponent<Observation>().setObservationText(lines[i]);
+                }
+
+            }
+            i++;
+        } //end while
+
     }
 
-    public IDictionary<int, string> getDict()
-    {
-        return dict;
-    }
+
 }

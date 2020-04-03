@@ -6,8 +6,9 @@ public class Observation : MonoBehaviour
 {
     public List<GameObject> visuals = new List<GameObject>();
     public List<AudioClip> clips = new List<AudioClip>();
-    public int classYear;
-    private int observationID;
+    private string classYear;
+    private string observationID;
+    private string observationText;
     private AudioSource audioSpeaker;
 
     // Start is called before the first frame update
@@ -23,14 +24,19 @@ public class Observation : MonoBehaviour
         
     }
 
-    public void setObservationID(int theID)
+    public void setObservationID(string theID)
     {
         observationID = theID;
     }
 
+    public void setObservationYear(string theClassYear)
+    {
+        classYear = theClassYear;
+    }
+
     public void playObservation()
     {
-
+        this.gameObject.SetActive(true);
     }
 
     public void pauseObservation()
@@ -38,8 +44,13 @@ public class Observation : MonoBehaviour
 
     }
 
-    public void setObservation()
+    public void setObservationText(string text)
     {
+        observationText = text;
+    }
 
+    public  string printInfo()
+    {
+        return "observationID: " + observationID + " classYear: " + classYear + "observationText: " + observationText;
     }
 }

@@ -6,6 +6,7 @@ public class GM : MonoBehaviour
 {
     public GameObject tutorial;
     public GameObject detectedImage;
+    public GameObject arrows;
     float tempCountDownValue;
     public AudioClip detectedSound;
     private AudioSource source;
@@ -21,7 +22,12 @@ public class GM : MonoBehaviour
     void Start()
     {
         //ARImages.SetActive(false);
-        this.GetComponent<TextReader>().readTextFile();
+        this.GetComponent<ObservationHandler>().setUp();
+        this.GetComponent<TextReader>().readTextFile(this.GetComponent<ObservationHandler>().returnListOfObservations());
+        this.GetComponent<ObservationHandler>().printAllObservations();
+        this.GetComponent<ObservationHandler>().activate(false);
+        arrows.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -58,5 +64,6 @@ public class GM : MonoBehaviour
             tempCountDownValue--;
         }
         detectedImage.SetActive(false);
+        arrows.SetActive(true);
     }
 }
