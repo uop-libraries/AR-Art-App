@@ -1,11 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Observation : MonoBehaviour
 {
     public List<GameObject> visuals = new List<GameObject>();
     public List<AudioClip> clips = new List<AudioClip>();
+    private Text [] observationTextReference;
+    //public GameObject panelRectTransform;
     private string classYear;
     private string observationID;
     private string observationText;
@@ -18,12 +21,7 @@ public class Observation : MonoBehaviour
 
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
+ 
     public void setObservationID(string theID)
     {
         observationID = theID;
@@ -48,6 +46,18 @@ public class Observation : MonoBehaviour
     public void setObservationText(string text)
     {
         observationText = text;
+        //Debug.Log("observationText " + observationText);
+        this.setTextValue();
+    }
+
+    private void setTextValue()
+    {
+        observationTextReference = this.GetComponentsInChildren<Text>(true); //include inactives
+        //Debug.Log("observationTextReference = " + observationTextReference.Length);
+        observationTextReference[0].text = observationText;
+        //observationTextReference[0].GetComponent<RectTransform>().pivot = new Vector2(.5f, .5f);
+        //panelRectTransform.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 1);
+        //panelRectTransform.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 1);
     }
 
     public  string printInfo()

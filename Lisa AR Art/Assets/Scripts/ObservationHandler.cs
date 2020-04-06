@@ -20,6 +20,7 @@ public class ObservationHandler : MonoBehaviour
 
             listOfObservations.Add(foundObservation);
         }
+        Debug.Log("size of observations list " + listOfObservations.Count);
     }
     public List<GameObject> returnListOfObservations()
     {
@@ -31,42 +32,42 @@ public class ObservationHandler : MonoBehaviour
      */
     public void startObservations()
     {
+        listOfObservations[currentPlayingObservation].gameObject.SetActive(true);
         listOfObservations[currentPlayingObservation].GetComponent<Observation>().playObservation();
     }
     public void playNextObservation()
     {
-        Debug.Log("playNextObservation");
-        Debug.Log("currentPlayingObservation " + currentPlayingObservation);
-        listOfObservations[currentPlayingObservation].GetComponent<Observation>().pauseObservation();
+       // Debug.Log("playNextObservation " + currentPlayingObservation);
+        listOfObservations[currentPlayingObservation].GetComponent<Observation>().pauseObservation(); //pause the current observation
         currentPlayingObservation++;
-        if (currentPlayingObservation < listOfObservations.Count && currentPlayingObservation >= 0)
-        {
-            listOfObservations[currentPlayingObservation].GetComponent<Observation>().playObservation();
-        }
-        else if(currentPlayingObservation >= 0)
+        //Debug.Log("playNextObservation incremented " + currentPlayingObservation);
+        if (!(currentPlayingObservation >= 0 && currentPlayingObservation <= listOfObservations.Count - 1)) //lists in unity start at 0 and count starts with 1 if there is an element
         {
             currentPlayingObservation = 0;
-            listOfObservations[currentPlayingObservation].GetComponent<Observation>().playObservation();
         }
+        this.setObservationActiveAndPlay(currentPlayingObservation);
+        //Debug.Log("playNextObservation end function " + currentPlayingObservation);
     }
 
     public void playPrevObservation()
     {
-        Debug.Log("playPrevObservation");
-        listOfObservations[currentPlayingObservation].GetComponent<Observation>().pauseObservation();
+        //Debug.Log("playPrevObservation " + currentPlayingObservation);
+        listOfObservations[currentPlayingObservation].GetComponent<Observation>().pauseObservation(); //pause the current observation
         currentPlayingObservation--;
-        Debug.Log("currentPlayingObservation " + currentPlayingObservation);
-        if (currentPlayingObservation >= 0 && currentPlayingObservation < listOfObservations.Count)
-        {
-            listOfObservations[currentPlayingObservation].GetComponent<Observation>().playObservation();
-        }
-        else 
+        //Debug.Log("playPrevObservation decrement " + currentPlayingObservation);
+        if (!(currentPlayingObservation >= 0 && currentPlayingObservation < listOfObservations.Count-1)) //lists in unity start at 0 and count starts with 1 if there is an element
         {
             currentPlayingObservation = listOfObservations.Count - 1;
-            listOfObservations[currentPlayingObservation].GetComponent<Observation>().playObservation();
         }
-        Debug.Log("currentPlayingObservation after" + currentPlayingObservation);
+        this.setObservationActiveAndPlay(currentPlayingObservation);        
+        //Debug.Log("playPrevObservation  end function " + currentPlayingObservation);
 
+    }
+
+    private void setObservationActiveAndPlay(int index)
+    {
+        listOfObservations[index].gameObject.SetActive(true);
+        listOfObservations[index].GetComponent<Observation>().playObservation();
     }
 
     public void printAllObservations()
@@ -76,6 +77,7 @@ public class ObservationHandler : MonoBehaviour
             Debug.Log(listOfObservations[i].GetComponent<Observation>().printInfo());
         }
     }
+
 
     public void activate(bool isActive)
     {

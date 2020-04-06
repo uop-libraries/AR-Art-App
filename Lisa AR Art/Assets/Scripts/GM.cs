@@ -13,27 +13,17 @@ public class GM : MonoBehaviour
      
 
     // Start is called before the first frame update
-    private void Awake()
-    {
-        detectedImage.SetActive(false);
-        source = GetComponent<AudioSource>();
-    }
-
     void Start()
     {
-        //ARImages.SetActive(false);
-        this.GetComponent<ObservationHandler>().setUp();
-        this.GetComponent<TextReader>().readTextFile(this.GetComponent<ObservationHandler>().returnListOfObservations());
-        this.GetComponent<ObservationHandler>().printAllObservations();
-        this.GetComponent<ObservationHandler>().activate(false);
+        detectedImage.SetActive(false);
         arrows.SetActive(false);
+        source = GetComponent<AudioSource>();
+        this.GetComponent<ObservationHandler>().setUp();
+        this.GetComponent<ObservationHandler>().activate(false); //hide the observations until detection
+        this.GetComponent<TextReader>().readTextFile(this.GetComponent<ObservationHandler>().returnListOfObservations()); 
+        //this.GetComponent<ObservationHandler>().printAllObservations();
+        //this.GetComponent<ObservationHandler>().activate(false);
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     /**
@@ -42,10 +32,11 @@ public class GM : MonoBehaviour
     public void endTutorial()
     {
         if (tutorial.activeSelf) {
-            tutorial.SetActive(false);
             detectedImage.SetActive(true);
+            Debug.Log("inside end tutorial if statement");
+            tutorial.SetActive(false);
             source.PlayOneShot(detectedSound, 1.0f);
-            StartCoroutine(StartCountdown(3));
+            StartCoroutine(StartCountdown(2));
         }
 
     }

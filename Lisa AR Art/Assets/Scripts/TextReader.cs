@@ -12,56 +12,59 @@ public class TextReader : MonoBehaviour
 {
     private List<GameObject> listOfObservations;
 
-
-    void Awake()
-    {
-    }
+    /**readTextFile
+     * called in GM start
+     * receives the list of observations
+     * reads in the text file data and converts the data into String format
+     * calls function addStringToObservation to store the text data into the appropriate observation
+     */
     public void readTextFile(List<GameObject> observations)
     {
-        string filePath = "Assets/TextFile/test.txt";
+        string filePath = "Assets/TextFile/data.txt";
         StreamReader reader = new StreamReader(filePath);
         string text = reader.ReadToEnd();
         reader.Close(); //close the reader
         listOfObservations = observations;
-        this.addStringToDictionary(text);
+        this.addStringToObservation(text);
 
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 
     /**addStringToDictionary
-     * add each line to a dictionary and remove extra white spaces
+     * add the text file data to each observation in the list
+     * the text file needs to be in the below format:
+     * [ID]
+     * [Term year]
+     * [Text observation]
+     * *whitespace*
+     * [ID]
+     * [Term year]
+     * [Text observation]
      */
-    void addStringToDictionary(string text)
+    void addStringToObservation(string text)
     {
         int observationNum = 0; //used to keep track of observation
         int numberOfObservations = listOfObservations.Count;
-        int i = 0;
+        int lineNum = 0;
         var lines = text.Split("\n"[0]);
-        while(i < lines.Length -1)
+        Debug.Log("number of lines in text file " + lines.Length);
+        while (lineNum < lines.Length -1)
         {
-            if (string.IsNullOrWhiteSpace(lines[i])) //next observation data
+            if (string.IsNullOrWhiteSpace(lines[lineNum])) //next observation data
             {
                 observationNum++;
             }
-            {
-                if (observationNum <= numberOfObservations)
-                {
-                    Debug.Log(lines.Length);
-                    Debug.Log("i" + i);
-                    listOfObservations[observationNum].GetComponent<Observation>().setObservationID(lines[i]);
-                    i++;
-                    listOfObservations[observationNum].GetComponent<Observation>().setObservationYear(lines[i]);
-                    i++;
-                    listOfObservations[observationNum].GetComponent<Observation>().setObservationText(lines[i]);
+            else {
+                    if (observationNum <= numberOfObservations)
+                    {
+                        Debug.Log("line number " + lineNum);
+                        listOfObservations[observationNum].GetComponent<Observation>().setObservationID(lines[lineNum]);
+                        lineNum++;
+                        listOfObservations[observationNum].GetComponent<Observation>().setObservationYear(lines[lineNum]);
+                        lineNum++;
+                        listOfObservations[observationNum].GetComponent<Observation>().setObservationText(lines[lineNum]);
+                    }
                 }
-
-            }
-            i++;
+            lineNum++;
         } //end while
 
     }
