@@ -26,7 +26,7 @@ public class GM : MonoBehaviour
 
     }
 
-    /**
+    /** endTutorial
      * called when the image/painting is detected. only called once upon first detection
      */
     public void endTutorial()
@@ -41,7 +41,7 @@ public class GM : MonoBehaviour
 
     }
 
-    /**
+    /** StartCountdown
      * timer for detection screen to go away.
      * paramter float represents the seconds
      */

@@ -8,7 +8,6 @@ public class Observation : MonoBehaviour
     public List<GameObject> visuals = new List<GameObject>();
     public List<AudioClip> clips = new List<AudioClip>();
     private Text [] observationTextReference;
-    //public GameObject panelRectTransform;
     private string classYear;
     private string observationID;
     private string observationText;
@@ -20,48 +19,58 @@ public class Observation : MonoBehaviour
         observationTextReference = this.GetComponentsInChildren<Text>(true); //include inactives
     }
 
-
+    /** setObservationID
+     * sets the observation id from the text file
+     */
     public void setObservationID(string theID)
     {
         observationID = theID;
     }
 
+    /** setObservationYear
+     * sets the class term and year (ex. spring 2020)
+     */
     public void setObservationYear(string theClassYear)
     {
         classYear = theClassYear;
     }
 
+    /** playObservation
+     * play/resets the observation, called when the observation is selected
+     * sets the object active, resets the scrollbar, and start auto scroll
+     */
     public void playObservation()
     {
         //this.setObservationText(observationText);
         this.gameObject.SetActive(true);
-        //Debug.Log("observationTextReference = " + observationTextReference.Length);
         observationTextReference[0].transform.parent.gameObject.GetComponent<ScrollText>().resetScrollBarPosition(); //reset the scroll bar
         observationTextReference[0].transform.parent.gameObject.GetComponent<ScrollText>().setIsScrolling(true); //get the parent of text to start auto scroll
 
     }
 
+    /**pauseObservation
+     * hide the observation
+     */
     public void pauseObservation()
     {
         this.gameObject.SetActive(false);
 
     }
 
+    /**setObservationText
+     * sets the string value of the observation
+     */
     public void setObservationText(string text)
     {
         observationText = text;
         //Debug.Log("observationText " + observationText);
-        this.setTextValue();
-    }
-
-    private void setTextValue()
-    {
-        //observationTextReference = this.GetComponentsInChildren<Text>(true); //include inactives
-        //Debug.Log("observationTextReference = " + observationTextReference.Length);
         observationTextReference[0].text = observationText;
     }
 
-    public  string printInfo()
+    /**printInfo
+     * used to debug the observation
+     */
+    public string printInfo()
     {
         return "observationID: " + observationID + " classYear: " + classYear + "observationText: " + observationText;
     }
