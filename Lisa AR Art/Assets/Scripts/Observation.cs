@@ -14,14 +14,13 @@ public class Observation : MonoBehaviour
     private string observationText;
     private AudioSource audioSpeaker;
 
-    // Start is called before the first frame update
     void Awake()
     {
         audioSpeaker = this.GetComponent<AudioSource>();
-
+        observationTextReference = this.GetComponentsInChildren<Text>(true); //include inactives
     }
 
- 
+
     public void setObservationID(string theID)
     {
         observationID = theID;
@@ -34,7 +33,12 @@ public class Observation : MonoBehaviour
 
     public void playObservation()
     {
+        //this.setObservationText(observationText);
         this.gameObject.SetActive(true);
+        //Debug.Log("observationTextReference = " + observationTextReference.Length);
+        observationTextReference[0].transform.parent.gameObject.GetComponent<ScrollText>().resetScrollBarPosition(); //reset the scroll bar
+        observationTextReference[0].transform.parent.gameObject.GetComponent<ScrollText>().setIsScrolling(true); //get the parent of text to start auto scroll
+
     }
 
     public void pauseObservation()
@@ -52,12 +56,9 @@ public class Observation : MonoBehaviour
 
     private void setTextValue()
     {
-        observationTextReference = this.GetComponentsInChildren<Text>(true); //include inactives
+        //observationTextReference = this.GetComponentsInChildren<Text>(true); //include inactives
         //Debug.Log("observationTextReference = " + observationTextReference.Length);
         observationTextReference[0].text = observationText;
-        //observationTextReference[0].GetComponent<RectTransform>().pivot = new Vector2(.5f, .5f);
-        //panelRectTransform.GetComponent<RectTransform>().anchorMin = new Vector2(0.5f, 1);
-        //panelRectTransform.GetComponent<RectTransform>().anchorMax = new Vector2(0.5f, 1);
     }
 
     public  string printInfo()

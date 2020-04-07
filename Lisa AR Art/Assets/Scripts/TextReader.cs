@@ -46,7 +46,7 @@ public class TextReader : MonoBehaviour
         int numberOfObservations = listOfObservations.Count;
         int lineNum = 0;
         var lines = text.Split("\n"[0]);
-        Debug.Log("number of lines in text file " + lines.Length);
+        //Debug.Log("number of lines in text file " + lines.Length);
         while (lineNum < lines.Length -1)
         {
             if (string.IsNullOrWhiteSpace(lines[lineNum])) //next observation data
@@ -56,7 +56,7 @@ public class TextReader : MonoBehaviour
             else {
                     if (observationNum <= numberOfObservations)
                     {
-                        Debug.Log("line number " + lineNum);
+                        //Debug.Log("line number " + lineNum);
                         listOfObservations[observationNum].GetComponent<Observation>().setObservationID(lines[lineNum]);
                         lineNum++;
                         listOfObservations[observationNum].GetComponent<Observation>().setObservationYear(lines[lineNum]);

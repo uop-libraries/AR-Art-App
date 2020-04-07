@@ -4,12 +4,16 @@ using UnityEngine;
 
 public class ObservationHandler : MonoBehaviour
 {
+    public AudioClip buttonClick;
     private int currentPlayingObservation;
     private List<GameObject> listOfObservations = new List<GameObject>();
+    private AudioSource source;
+
     // Start is called before the first frame update
     void Start()
     {
         currentPlayingObservation = 0;
+        source = GetComponent<AudioSource>();
         setUp();
     }
 
@@ -37,7 +41,9 @@ public class ObservationHandler : MonoBehaviour
     }
     public void playNextObservation()
     {
-       // Debug.Log("playNextObservation " + currentPlayingObservation);
+        source.PlayOneShot(buttonClick, 1.0f);
+
+        // Debug.Log("playNextObservation " + currentPlayingObservation);
         listOfObservations[currentPlayingObservation].GetComponent<Observation>().pauseObservation(); //pause the current observation
         currentPlayingObservation++;
         //Debug.Log("playNextObservation incremented " + currentPlayingObservation);
@@ -51,6 +57,8 @@ public class ObservationHandler : MonoBehaviour
 
     public void playPrevObservation()
     {
+        source.PlayOneShot(buttonClick, 1.0f);
+
         //Debug.Log("playPrevObservation " + currentPlayingObservation);
         listOfObservations[currentPlayingObservation].GetComponent<Observation>().pauseObservation(); //pause the current observation
         currentPlayingObservation--;
