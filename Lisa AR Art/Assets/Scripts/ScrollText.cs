@@ -17,7 +17,7 @@ public class ScrollText : MonoBehaviour
     void Start()
     {
         isScrolling = false;
-        scrollSpeed = 0.09f;
+        scrollSpeed = 0.001f;
         scrollbar.onValueChanged.AddListener(ListenerMethod); //listen for the scroll values changing
     }
 
@@ -26,8 +26,9 @@ public class ScrollText : MonoBehaviour
     {
         if (isScrolling) //auto scroll the text
         {
-            Vector2 currentPosition = this.GetComponent<RectTransform>().position;
-            this.GetComponent<RectTransform>().position = new Vector2(currentPosition.x, currentPosition.y + scrollSpeed);
+            float currScrollBarValue = scrollbar.value;
+            scrollbar.value = (currScrollBarValue - scrollSpeed); //adjust the scrollbar value to make text scroll
+
         }
     }
 

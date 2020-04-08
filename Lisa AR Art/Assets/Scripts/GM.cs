@@ -58,4 +58,12 @@ public class GM : MonoBehaviour
         arrows.SetActive(true);
         this.GetComponent<ObservationHandler>().startObservations();
     }
+
+    /**exitApplication
+     * quit the application
+     */
+    public void exitApplication()
+    {
+        Application.Quit();
+    }
 }

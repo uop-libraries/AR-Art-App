@@ -10,6 +10,7 @@ using System.IO;
  */
 public class TextReader : MonoBehaviour
 {
+    public TextAsset file;
     private List<GameObject> listOfObservations;
 
     /**readTextFile
@@ -20,10 +21,12 @@ public class TextReader : MonoBehaviour
      */
     public void readTextFile(List<GameObject> observations)
     {
-        string filePath = "Assets/TextFile/data.txt";
-        StreamReader reader = new StreamReader(filePath);
-        string text = reader.ReadToEnd();
-        reader.Close(); //close the reader
+        //string filePath = "Assets/StreamingAssets/data.txt";
+        //string filePath = "Assets/TextFile/data.txt";
+        //StreamReader reader = new StreamReader(filePath);
+        //string text = reader.ReadToEnd();
+        //reader.Close(); //close the reader
+        string text = file.text;
         listOfObservations = observations;
         this.addStringToObservation(text);
 

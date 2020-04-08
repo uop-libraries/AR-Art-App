@@ -2208,6 +2208,11 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9103417523183566240, guid: a0c83f9eac8a10f4b914fd1f5692ee0b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a0c83f9eac8a10f4b914fd1f5692ee0b, type: 3}
 --- !u!4 &793551989 stripped
@@ -2569,6 +2574,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!21 &1118666022
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: 'gameMaterial
+
+    17092'
+  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 5
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: ea6bb27be0624a1883e203d94332fbb4, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats: []
+    m_Colors:
+    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1122079708
 GameObject:
   m_ObjectHideFlags: 0
@@ -2827,7 +2860,7 @@ MonoBehaviour:
     odio pellentesque diam volutpat. Ullamcorper dignissim cras tincidunt lobortis
     feugiat vivamus at.
 
-    
+
 
     Nisi porta lorem mollis aliquam. Urna nec tincidunt
     praesent semper feugiat nibh sed pulvinar proin. Et leo duis ut diam quam. Quam
@@ -2841,49 +2874,49 @@ MonoBehaviour:
     lobortis feugiat. Interdum velit laoreet id donec ultrices tincidunt arcu non
     sodales.
 
-    
 
-    Ultrices mi tempus imperdiet nulla malesuada pellentesque.
-    Convallis convallis tellus id interdum velit laoreet id donec. Diam vulputate
-    ut pharetra sit. Massa tempor nec feugiat nisl. Ultrices neque ornare aenean
-    euismod elementum nisi. Vel quam elementum pulvinar etiam non quam lacus suspendisse
-    faucibus. Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec.
-    Id donec ultrices tincidunt arcu non sodales neque sodales. Neque ornare aenean
-    euismod elementum nisi quis eleifend. Proin sed libero enim sed faucibus turpis
-    in eu. Feugiat nisl pretium fusce id velit ut. Id venenatis a condimentum vitae
-    sapien pellentesque habitant morbi tristique. Ut etiam sit amet nisl purus in
-    mollis nunc sed.
 
-    
+    Ultrices mi tempus imperdiet nulla malesuada pellentesque. Convallis
+    convallis tellus id interdum velit laoreet id donec. Diam vulputate ut pharetra
+    sit. Massa tempor nec feugiat nisl. Ultrices neque ornare aenean euismod elementum
+    nisi. Vel quam elementum pulvinar etiam non quam lacus suspendisse faucibus.
+    Egestas egestas fringilla phasellus faucibus scelerisque eleifend donec. Id donec
+    ultrices tincidunt arcu non sodales neque sodales. Neque ornare aenean euismod
+    elementum nisi quis eleifend. Proin sed libero enim sed faucibus turpis in eu.
+    Feugiat nisl pretium fusce id velit ut. Id venenatis a condimentum vitae sapien
+    pellentesque habitant morbi tristique. Ut etiam sit amet nisl purus in mollis
+    nunc sed.
 
-    Volutpat consequat mauris nunc congue nisi vitae
-    suscipit tellus. Sed risus ultricies tristique nulla aliquet enim tortor. Nisl
-    nisi scelerisque eu ultrices vitae auctor eu augue ut. Nec ullamcorper sit amet
-    risus. Id semper risus in hendrerit gravida rutrum quisque non. Amet volutpat
-    consequat mauris nunc congue nisi vitae suscipit tellus. Ac tortor dignissim
-    convallis aenean et. Nunc consequat interdum varius sit amet mattis vulputate.
-    Lectus proin nibh nisl condimentum id venenatis a condimentum. Elementum sagittis
-    vitae et leo duis ut. Pretium quam vulputate dignissim suspendisse in est ante
-    in. Sed vulputate mi sit amet mauris commodo quis imperdiet. Tincidunt praesent
-    semper feugiat nibh sed pulvinar proin. Pulvinar mattis nunc sed blandit libero
-    volutpat. Nibh praesent tristique magna sit. Neque egestas congue quisque egestas
-    diam in. Pellentesque eu tincidunt tortor aliquam nulla facilisi. Molestie a
-    iaculis at erat pellentesque.
 
-    
 
-    Sed euismod nisi porta lorem mollis
-    aliquam ut. Leo a diam sollicitudin tempor id eu. Nec sagittis aliquam malesuada
-    bibendum arcu. Vitae suscipit tellus mauris a diam maecenas sed enim ut. Et malesuada
-    fames ac turpis egestas maecenas pharetra convallis. Tristique senectus et netus
-    et malesuada fames ac. Magna ac placerat vestibulum lectus. Diam phasellus vestibulum
-    lorem sed risus ultricies tristique. Arcu non odio euismod lacinia at quis. Vitae
-    proin sagittis nisl rhoncus mattis rhoncus urna. Vitae ultricies leo integer
-    malesuada. Mauris sit amet massa vitae tortor. Tempor commodo ullamcorper a lacus
-    vestibulum. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in
-    dictum. Nec dui nunc mattis enim ut tellus elementum sagittis vitae. Habitant
-    morbi tristique senectus et netus. Nibh tellus molestie nunc non blandit massa
-    enim nec. Ac tortor vitae purus faucibus ornare suspendisse sed nisi.'
+    Volutpat consequat mauris nunc congue nisi vitae suscipit tellus.
+    Sed risus ultricies tristique nulla aliquet enim tortor. Nisl nisi scelerisque
+    eu ultrices vitae auctor eu augue ut. Nec ullamcorper sit amet risus. Id semper
+    risus in hendrerit gravida rutrum quisque non. Amet volutpat consequat mauris
+    nunc congue nisi vitae suscipit tellus. Ac tortor dignissim convallis aenean
+    et. Nunc consequat interdum varius sit amet mattis vulputate. Lectus proin nibh
+    nisl condimentum id venenatis a condimentum. Elementum sagittis vitae et leo
+    duis ut. Pretium quam vulputate dignissim suspendisse in est ante in. Sed vulputate
+    mi sit amet mauris commodo quis imperdiet. Tincidunt praesent semper feugiat
+    nibh sed pulvinar proin. Pulvinar mattis nunc sed blandit libero volutpat. Nibh
+    praesent tristique magna sit. Neque egestas congue quisque egestas diam in. Pellentesque
+    eu tincidunt tortor aliquam nulla facilisi. Molestie a iaculis at erat pellentesque.
+
+
+
+    Sed
+    euismod nisi porta lorem mollis aliquam ut. Leo a diam sollicitudin tempor id
+    eu. Nec sagittis aliquam malesuada bibendum arcu. Vitae suscipit tellus mauris
+    a diam maecenas sed enim ut. Et malesuada fames ac turpis egestas maecenas pharetra
+    convallis. Tristique senectus et netus et malesuada fames ac. Magna ac placerat
+    vestibulum lectus. Diam phasellus vestibulum lorem sed risus ultricies tristique.
+    Arcu non odio euismod lacinia at quis. Vitae proin sagittis nisl rhoncus mattis
+    rhoncus urna. Vitae ultricies leo integer malesuada. Mauris sit amet massa vitae
+    tortor. Tempor commodo ullamcorper a lacus vestibulum. Maecenas volutpat blandit
+    aliquam etiam erat velit scelerisque in dictum. Nec dui nunc mattis enim ut tellus
+    elementum sagittis vitae. Habitant morbi tristique senectus et netus. Nibh tellus
+    molestie nunc non blandit massa enim nec. Ac tortor vitae purus faucibus ornare
+    suspendisse sed nisi.'
 --- !u!222 &1184711748
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2892,169 +2925,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184711745}
   m_CullTransparentMesh: 0
---- !u!43 &1261758236
-Mesh:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: ImageTargetMesh14506
-  serializedVersion: 10
-  m_SubMeshes:
-  - serializedVersion: 2
-    firstByte: 0
-    indexCount: 6
-    topology: 0
-    baseVertex: 0
-    firstVertex: 0
-    vertexCount: 4
-    localAABB:
-      m_Center: {x: 0, y: 0, z: 0}
-      m_Extent: {x: 0.5, y: 0, z: 0.8299495}
-  m_Shapes:
-    vertices: []
-    shapes: []
-    channels: []
-    fullWeights: []
-  m_BindPose: []
-  m_BoneNameHashes: 
-  m_RootBoneNameHash: 0
-  m_BonesAABB: []
-  m_VariableBoneCountWeights:
-    m_Data: 
-  m_MeshCompression: 0
-  m_IsReadable: 1
-  m_KeepVertices: 1
-  m_KeepIndices: 1
-  m_IndexFormat: 0
-  m_IndexBuffer: 000001000200020001000300
-  m_VertexData:
-    serializedVersion: 3
-    m_VertexCount: 4
-    m_Channels:
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 12
-      format: 0
-      dimension: 3
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 24
-      format: 0
-      dimension: 2
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    - stream: 0
-      offset: 0
-      format: 0
-      dimension: 0
-    m_DataSize: 128
-    _typelessdata: 000000bf00000000927754bf000000000000803f000000000000000000000000000000bf000000009277543f000000000000803f00000000000000000000803f0000003f00000000927754bf000000000000803f000000000000803f000000000000003f000000009277543f000000000000803f000000000000803f0000803f
-  m_CompressedMesh:
-    m_Vertices:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UV:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Normals:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Tangents:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Weights:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_NormalSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_TangentSigns:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_FloatColors:
-      m_NumItems: 0
-      m_Range: 0
-      m_Start: 0
-      m_Data: 
-      m_BitSize: 0
-    m_BoneIndices:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_Triangles:
-      m_NumItems: 0
-      m_Data: 
-      m_BitSize: 0
-    m_UVInfo: 0
-  m_LocalAABB:
-    m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 0.5, y: 0, z: 0.8299495}
-  m_MeshUsageFlags: 0
-  m_BakedConvexCollisionMesh: 
-  m_BakedTriangleCollisionMesh: 
-  m_MeshMetrics[0]: 1
-  m_MeshMetrics[1]: 1
-  m_MeshOptimizationFlags: 1
-  m_StreamData:
-    offset: 0
-    size: 0
-    path: 
 --- !u!1 &1263957196
 GameObject:
   m_ObjectHideFlags: 0
@@ -3554,7 +3424,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1423264492}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -101, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 873937224}
@@ -4513,7 +4383,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1562702017}
-  m_Mesh: {fileID: 1261758236}
+  m_Mesh: {fileID: 1736018695}
 --- !u!23 &1562702019
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4532,7 +4402,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 1624343414}
+  - {fileID: 1118666022}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4974,34 +4844,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611552505}
   m_CullTransparentMesh: 0
---- !u!21 &1624343414
-Material:
-  serializedVersion: 6
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_Name: 'gameMaterial
-
-    14516'
-  m_Shader: {fileID: 10752, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: 
-  m_LightmapFlags: 5
-  m_EnableInstancingVariants: 0
-  m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
-  m_SavedProperties:
-    serializedVersion: 3
-    m_TexEnvs:
-    - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ea6bb27be0624a1883e203d94332fbb4, type: 3}
-        m_Scale: {x: 1, y: 1}
-        m_Offset: {x: 0, y: 0}
-    m_Floats: []
-    m_Colors:
-    - _Color: {r: 0.82089555, g: 0.82089555, b: 0.82089555, a: 1}
 --- !u!1 &1625712872
 GameObject:
   m_ObjectHideFlags: 0
@@ -5301,6 +5143,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 214de4b32bbd62e43806321a2b0babdc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  file: {fileID: 4900000, guid: e57a093039dce5f409be48a0b5980e7d, type: 3}
 --- !u!114 &1661132286
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5413,6 +5256,169 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!43 &1736018695
+Mesh:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ImageTargetMesh17082
+  serializedVersion: 10
+  m_SubMeshes:
+  - serializedVersion: 2
+    firstByte: 0
+    indexCount: 6
+    topology: 0
+    baseVertex: 0
+    firstVertex: 0
+    vertexCount: 4
+    localAABB:
+      m_Center: {x: 0, y: 0, z: 0}
+      m_Extent: {x: 0.5, y: 0, z: 0.8299495}
+  m_Shapes:
+    vertices: []
+    shapes: []
+    channels: []
+    fullWeights: []
+  m_BindPose: []
+  m_BoneNameHashes: 
+  m_RootBoneNameHash: 0
+  m_BonesAABB: []
+  m_VariableBoneCountWeights:
+    m_Data: 
+  m_MeshCompression: 0
+  m_IsReadable: 1
+  m_KeepVertices: 1
+  m_KeepIndices: 1
+  m_IndexFormat: 0
+  m_IndexBuffer: 000001000200020001000300
+  m_VertexData:
+    serializedVersion: 3
+    m_VertexCount: 4
+    m_Channels:
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 12
+      format: 0
+      dimension: 3
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 24
+      format: 0
+      dimension: 2
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    - stream: 0
+      offset: 0
+      format: 0
+      dimension: 0
+    m_DataSize: 128
+    _typelessdata: 000000bf00000000927754bf000000000000803f000000000000000000000000000000bf000000009277543f000000000000803f00000000000000000000803f0000003f00000000927754bf000000000000803f000000000000803f000000000000003f000000009277543f000000000000803f000000000000803f0000803f
+  m_CompressedMesh:
+    m_Vertices:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UV:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Normals:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Tangents:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Weights:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_NormalSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_TangentSigns:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_FloatColors:
+      m_NumItems: 0
+      m_Range: 0
+      m_Start: 0
+      m_Data: 
+      m_BitSize: 0
+    m_BoneIndices:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_Triangles:
+      m_NumItems: 0
+      m_Data: 
+      m_BitSize: 0
+    m_UVInfo: 0
+  m_LocalAABB:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0.5, y: 0, z: 0.8299495}
+  m_MeshUsageFlags: 0
+  m_BakedConvexCollisionMesh: 
+  m_BakedTriangleCollisionMesh: 
+  m_MeshMetrics[0]: 1
+  m_MeshMetrics[1]: 1
+  m_MeshOptimizationFlags: 1
+  m_StreamData:
+    offset: 0
+    size: 0
+    path: 
 --- !u!1 &1750224994
 GameObject:
   m_ObjectHideFlags: 0
@@ -5670,22 +5676,22 @@ PrefabInstance:
     - target: {fileID: 2814980710607695541, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: -0.0000038146973
       objectReference: {fileID: 0}
     - target: {fileID: 2814980710607695541, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
         type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -25
+      value: -41.650024
       objectReference: {fileID: 0}
     - target: {fileID: 2814980710607695541, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 150
+      value: 245.8
       objectReference: {fileID: 0}
     - target: {fileID: 2814980710607695541, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 50
+      value: 83.3
       objectReference: {fileID: 0}
     - target: {fileID: 2814980710607695541, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
         type: 3}
@@ -5720,7 +5726,7 @@ PrefabInstance:
     - target: {fileID: 2814980710607695542, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2814980710607695542, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
         type: 3}
@@ -5817,6 +5823,31 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
       value: On Click
       objectReference: {fileID: 0}
+    - target: {fileID: 2814980710607695542, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2814980710607695542, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2814980710607695542, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1661132282}
+    - target: {fileID: 2814980710607695542, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: exitApplication
+      objectReference: {fileID: 0}
+    - target: {fileID: 2814980710607695542, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2814980710607695543, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
         type: 3}
       propertyPath: m_Sprite
@@ -5826,6 +5857,26 @@ PrefabInstance:
     - target: {fileID: 2814980710607695543, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
         type: 3}
       propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319767617295772554, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.0000076293945
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319767617295772554, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 50.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319767617295772554, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319767617295772554, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
+        type: 3}
+      propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7319767617295772555, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
@@ -5841,7 +5892,7 @@ PrefabInstance:
     - target: {fileID: 7319767617295772555, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7319767617295772555, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
         type: 3}
@@ -5857,6 +5908,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.spaceCount
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319767617295772555, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 39.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319767617295772555, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
+        type: 3}
+      propertyPath: m_fontSizeBase
+      value: 39.46
+      objectReference: {fileID: 0}
+    - target: {fileID: 7319767617295772555, guid: 8de8f6c5f34274e569ac1bd4d57c3c70,
+        type: 3}
+      propertyPath: m_firstOverflowCharacterIndex
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8de8f6c5f34274e569ac1bd4d57c3c70, type: 3}
