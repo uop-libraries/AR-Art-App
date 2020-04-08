@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Observation : MonoBehaviour
 {
-    public List<GameObject> visuals = new List<GameObject>();
+    public GameObject visuals;
     public List<AudioClip> clips = new List<AudioClip>();
     private Text [] observationTextReference;
     private string classYear;
@@ -43,6 +43,7 @@ public class Observation : MonoBehaviour
     {
         //this.setObservationText(observationText);
         this.gameObject.SetActive(true);
+        visuals.SetActive(true);
         observationTextReference[0].transform.parent.gameObject.GetComponent<ScrollText>().resetScrollBarPosition(); //reset the scroll bar
         observationTextReference[0].transform.parent.gameObject.GetComponent<ScrollText>().setIsScrolling(true); //get the parent of text to start auto scroll
 
@@ -54,7 +55,7 @@ public class Observation : MonoBehaviour
     public void pauseObservation()
     {
         this.gameObject.SetActive(false);
-
+        visuals.SetActive(false);
     }
 
     /**setObservationText
@@ -74,4 +75,6 @@ public class Observation : MonoBehaviour
     {
         return "observationID: " + observationID + " classYear: " + classYear + "observationText: " + observationText;
     }
+
+ 
 }
