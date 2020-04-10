@@ -7,6 +7,7 @@ public class GM : MonoBehaviour
     public GameObject tutorial;
     public GameObject detectedImage;
     public GameObject arrows;
+    public GameObject lostDetectionWindow;
     float tempCountDownValue;
     public AudioClip detectedSound;
     private AudioSource source;
@@ -15,6 +16,7 @@ public class GM : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        lostDetectionWindow.SetActive(false);
         detectedImage.SetActive(false);
         arrows.SetActive(false);
         source = GetComponent<AudioSource>();
@@ -31,6 +33,7 @@ public class GM : MonoBehaviour
      */
     public void endTutorial()
     {
+        //lostDetectionWindow.SetActive(false);
         if (tutorial.activeSelf) {
             detectedImage.SetActive(true);
             Debug.Log("inside end tutorial if statement");
@@ -66,4 +69,14 @@ public class GM : MonoBehaviour
     {
         Application.Quit();
     }
+
+    /**onLost
+     * if painting detection is lost, call this function
+     */
+    public void onLost()
+    {
+        lostDetectionWindow.SetActive(true);
+    }
+
+
 }
